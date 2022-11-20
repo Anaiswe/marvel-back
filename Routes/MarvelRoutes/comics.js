@@ -12,9 +12,6 @@ router.get("/Comics", async (req, res) => {
     const title = req.query.title || "";
 
     const response = await axios.get(
-      //   `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${process.env.MARVEL_API_KEY}&skip=${req.query.skip}&limit=${req.query.limit}&title=${req.query.search}`
-      // `${apiUrl}/comics?apiKey=${process.env.MARVEL_API_KEY}&skip=${skip}&limit=${limit}&title=${title}`
-      // Attention, il faut préciser la route dans Postman si l'on veut skip/limit/etc...
       `${apiUrl}/comics?apiKey=${apiKey}&skip=${skip}&limit=${limit}&title=${title}`
       // `${apiUrl}/comics?apiKey=${apiKey}`
     );
